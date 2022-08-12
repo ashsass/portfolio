@@ -1,0 +1,58 @@
+/* I couldn't get the about me, projects, and skills to format properly, because the semantics. I removed them for now and I want to look in to how to properly format grid with semantics effecting the descendant elements */
+
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0; /*Reset the default*/
+}
+
+.container{
+    width: 100vw;
+    height: 100vh; /*This with the width reset will allow the cointainer to take up the viewing area*/
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 300px 1fr 1fr 50px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+header, section, footer, div{
+    padding: 10px;
+    border: 1px solid black;
+} /*Visial aid to see how the content is settling in the format*/
+
+header{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.about-info{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+}
+
+#image-container{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#projects-info{
+    grid-column: 1 / 4;
+    grid-row: 3 / span 1;
+}
+
+#skills-info{
+    grid-column: 1 / 4;
+    grid-row: 4 / span 1;
+}
+
+footer{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
