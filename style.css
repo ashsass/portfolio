@@ -1,5 +1,7 @@
 /* I couldn't get the about me, projects, and skills to format properly, because the semantics. I removed them for now and I want to look in to how to properly format grid with semantics effecting the descendant elements */
 
+/* test */
+
 html{
     font-size: 16px;
 }
