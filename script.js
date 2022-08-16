@@ -1,8 +1,17 @@
 /*Variables*/
-let projImg1 = document.getElementsById('project1');
-let projImg2 = document.getElementsById('project2');
-let projImg3 = document.getElementsById('project3');
+let projImg1 = document.getElementById('project1');
+let projImg2 = document.getElementById('project2');
+let projImg3 = document.getElementById('project3');
 
-let projPara1 = document.getElementsById('mixedmessages');
-let projPara2 = document.getElementsById('bookclub');
-let projPara2 = document.getElementsById('meowpeow');
+let projPara1 = document.getElementById('mixedmessages');
+let projPara2 = document.getElementById('bookclub');
+let projPara3 = document.getElementById('meowpeow');
+
+/*Hidden elements*/
+projImg1.hidden = true;
+projImg2.hidden = true;
+projImg3.hidden = true;
+
+projPara1.hidden = true;
+projPara2.hidden = true;
+projPara3.hidden = true;
