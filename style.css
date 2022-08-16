@@ -1,12 +1,28 @@
 /* I couldn't get the about me, projects, and skills to format properly, because the semantics. I removed them for now and I want to look in to how to properly format grid with semantics effecting the descendant elements */
 
-
-html{
-    font-size: 16px;
+/*Universal*/
+@font-face{
+    src: url(./resources/fonts/Sofia/Sofia-Regular.ttf);
+    font-family: sofia;
 }
 
 body{
     margin: 0; /*Reset the default*/
+    background-color: lightslategray;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header, section, footer, .selfie-container{
+    padding: 10px;
+    border: 1px solid black;
+} 
+
+h2, h3, h4, h5{
+    font-family: sofia, cursive;
 }
 
 
@@ -16,64 +32,113 @@ body{
     height: 100vh; /*This with the width reset will allow the cointainer to take up the viewing area*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 300px 1fr 1fr 50px;
-    gap: 10px;
-    padding: 10px;
+    grid-template-rows: 200px 1fr 1fr 1fr 50px;
+    gap: 1rem;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
-header, section, footer, div{
-    padding: 10px;
-    border: 1px solid black;
-} /*Visial aid to see how the content is settling in the format*/
+
+/*Header*/
+h1{
+    font-family: sofia, cursive;
+    font-size: 5rem;
+    grid-column: 1 / span 3;
+    margin: 0;
+    padding-left: 1rem;
+}
 
 header{
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
 
+
+/*Navigation*/
+.main-nav ul{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    color: black;
+}
+
+.main-nav li{
+    margin: 0 3rem;
+}
+
+.main-nav a{
+    border: 1px dashed black;
+    border-radius: 5px;
+    box-shadow: 3px 3px;
+    text-decoration: none;
+    padding: .25rem 2rem;
+    color: black;
+}
+
+a:active{
+    box-shadow: 0  0;
+}
+
+
+/*My photo section*/
+.self-image{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+}
+
+.selfie-container img{
+    object-fit: cover;
+}
+
+.selfie-container{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background-color: white;
+}
+
+
+/*About me*/
 .about-info{
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
+    background-color: white;
+    line-height: 1.5rem;
 }
 
-.image-container{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
+
+/*Projects section*/
+.projects-info img{
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid black;
 }
 
 .projects-info{
     grid-column: 1 / 4;
     grid-row: 3 / span 1;
+    background-color: white;
 }
 
+
+/*Skills section*/
 .skills-info{
     grid-column: 1 / 4;
     grid-row: 4 / span 1;
+    background-color: white;
 }
 
-footer{
-    grid-column: 1 / 4;
-    grid-row: 5 / 6;
+.skills-info h2{
+    margin-bottom: 0;
 }
 
-
-/*Scaling images*/
-    /*About me section*/
-.self-image{
-    max-width: 100%;
-    max-height: 100%;
-    padding: 0 15%;
-}
-
-.self-image-container img{
-    object-fit: cover;
-}
-
-/*Skills section*/
 .skills-image-container{
     display: flex;
     justify-content: center;
+    border: none;
 }
 
 .skills-image{
@@ -94,9 +159,14 @@ footer{
     width: 6rem;
 }
 
-/*Projects section*/
-.projects-info img{
-    max-width: 100%;
-    max-height: 100%;
-    border: 2px solid black;
+
+/*Footer*/
+footer{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    background-color: white;
+}
+
+h4{
+    margin: 0;
 }
