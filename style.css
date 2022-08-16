@@ -7,7 +7,7 @@
 }
 
 body{
-    margin: 0; /*Reset the default*/
+    margin: -10px -10px; /*Reset the default*/
     background-color: lightslategray;
 }
 
@@ -121,6 +121,25 @@ a:active{
     grid-column: 1 / 4;
     grid-row: 3 / span 1;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button{
+    border: none;
+    background-color: white;
+    margin-left: 2rem;
+}
+
+button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project{
+    width: 80%;
+    margin: 0 auto;
 }
 
 
