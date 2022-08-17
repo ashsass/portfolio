@@ -21,10 +21,15 @@ header, section, footer, .selfie-container{
     border: 1px solid black;
 } 
 
-h2, h3, h4, h5{
+h2, h3{
     font-family: sofia, cursive;
+    margin-top: 0.5rem;
 }
 
+h4, h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
 
 /*Setting up grid*/
 .container{
@@ -184,6 +189,10 @@ footer{
     grid-column: 1 / 4;
     grid-row: 5 / 6;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 h4{
