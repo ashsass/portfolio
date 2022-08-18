@@ -155,10 +155,6 @@ button:hover{
     background-color: white;
 }
 
-.skills-info h2{
-    margin-bottom: 0;
-}
-
 .skills-image-container{
     display: flex;
     justify-content: center;
@@ -197,4 +193,32 @@ footer{
 
 h4{
     margin: 0;
+}
+
+
+/*Contact Page*/
+.contact-main{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background-color: white;
+    
+}
+
+.contact-main img{
+    height: 4rem;
+    width: 4rem;
+}
+
+.contact-main ul{
+    list-style: none;
+    display: flex;
+    padding: 1rem auto;
+}
+
+.contact-main li{
+    padding: 1rem;
+}
+
+.contact-main h2{
+    padding-left: .5rem;
 }
