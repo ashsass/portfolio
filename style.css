@@ -37,7 +37,14 @@ h4, h5{
     height: 100vh; /*This with the width reset will allow the cointainer to take up the viewing area*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 1fr 1fr 1fr 50px;
+    grid-template-rows: 200px 2fr 1fr 1fr 50px;
+    grid-template-areas: 
+        "header header header"
+        "selfie about about"
+        "selfie skills skills"
+        "projects projects projects"
+        "footer footer footer";
+
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -54,8 +61,7 @@ h1{
 }
 
 header{
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 1;
+    grid-area: header;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -100,16 +106,14 @@ a:active{
 }
 
 .selfie-container{
-    grid-column: 1 / span 1;
-    grid-row: 2/ span 2;
+    grid-area: selfie;
     background-color: white;
 }
 
 
 /*About me*/
 .about-info{
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 1;
+    grid-area: about;
     background-color: white;
     line-height: 1.5rem;
 }
@@ -123,8 +127,7 @@ a:active{
 }
 
 .projects-info{
-    grid-column: 1 / 4;
-    grid-row: 4 / span 1;
+    grid-area: projects;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -150,8 +153,7 @@ button:hover{
 
 /*Skills section*/
 .skills-info{
-    grid-column: 2 / 4;
-    grid-row: 3 / span 1;
+    grid-area: skills;
     background-color: white;
 }
 
@@ -182,8 +184,7 @@ button:hover{
 
 /*Footer*/
 footer{
-    grid-column: 1 / 4;
-    grid-row: 5 / 6;
+    grid-area: footer;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -225,10 +226,39 @@ h4{
 
 
 /*Responsive code*/
-@media only screen and (max-width: 722px){
+@media only screen and (max-width: 721px){
 
 }
 
 @media only screen and (max-width: 600px){
-    
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "header"
+            "selfie"
+            "about"
+            "skills"
+            "projects"
+            "footer";
+    }
+
+    header{
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-nav a{
+        padding: .25rem 0.25rem;
+    }
+
+    .main-nav li{
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        margin: 0;
+    }
 }
