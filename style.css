@@ -95,19 +95,20 @@ a:active{
 
 
 /*My photo section*/
-.self-image{
+/* .selfie-container img{
     max-width: 100%;
-    height: -webkit-fill-available; /*Don't knwo what this means, but it was an option in the dev tools, and it worked so...*/
-    padding: 0;
-}
-
-.selfie-container img{
-    object-fit: cover;
-}
+    height: auto;
+    display: block;
+} */
 
 .selfie-container{
     grid-area: selfie;
     background-color: white;
+    overflow: hidden;
+    background-image: url('./resources/photos/Ashlyn.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -246,19 +247,31 @@ h4{
     .main-nav a{
         padding: .25rem 1rem;
     }
+
+    .container{
+        grid-template-areas: 
+            "header header header"
+            "selfie about about"
+            "skills skills skills"
+            "projects projects projects"
+            "footer footer footer";;
+    }
 }
 
 @media only screen and (max-width: 600px){
     .container{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-areas: 
             "header"
-            "selfie"
             "about"
             "skills"
             "projects"
             "footer";
+    }
+
+    .selfie-container{
+        display: none;
     }
 
     header{
