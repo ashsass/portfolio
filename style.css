@@ -35,19 +35,6 @@ h4, h5{
 .container{
     width: 100vw;
     height: 100vh; /*This with the width reset will allow the cointainer to take up the viewing area*/
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 2fr 1fr 1fr 50px;
-    grid-template-areas: 
-        "header header header"
-        "selfie about about"
-        "selfie skills skills"
-        "projects projects projects"
-        "footer footer footer";
-
-    gap: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
 }
 
 
@@ -61,9 +48,6 @@ h1{
 }
 
 header{
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
     background-color: white;
 }
 
@@ -93,25 +77,6 @@ a:active{
     box-shadow: 0  0;
 }
 
-
-/*My photo section*/
-/* .selfie-container img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
-
-.selfie-container{
-    grid-area: selfie;
-    background-color: white;
-    overflow: hidden;
-    background-image: url('./resources/photos/Ashlyn.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
 /*About me*/
 .about-info{
     grid-area: about;
@@ -121,14 +86,8 @@ a:active{
 
 
 /*Projects section*/
-.projects-info img{
-    max-width: 100%;
-    max-height: 100%;
-    border: 2px solid black;
-}
 
 .projects-info{
-    grid-area: projects;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -154,7 +113,6 @@ button:hover{
 
 /*Skills section*/
 .skills-info{
-    grid-area: skills;
     background-color: white;
 }
 
@@ -185,7 +143,6 @@ button:hover{
 
 /*Footer*/
 footer{
-    grid-area: footer;
     background-color: white;
     display: flex;
     flex-direction: row;
