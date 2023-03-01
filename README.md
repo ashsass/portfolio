@@ -9,3 +9,6 @@ This is a project from Codecademy to create a webpage to hold my portfolio.
 - Create a separate contact page
 
 Visit the page on [GitHub Pages](ashsass.github.io)
+
+### Notes
+- Want to work on the color scheme with the font colors
