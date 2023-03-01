@@ -1,295 +1,57 @@
-/* I couldn't get the about me, projects, and skills to format properly, because the semantics. I removed them for now and I want to look in to how to properly format grid with semantics effecting the descendant elements */
+/*
+FFC996 - tan
+FF8474 - salmon
+9F5F80 - lighter purple
+583D72 - darker purple
+https://www.colorhunt.co/palette/ffc996ff84749f5f80583d72
+*/
 
-/*Universal*/
-@font-face{
-    src: url(./resources/fonts/Sofia/Sofia-Regular.ttf);
-    font-family: sofia;
-}
-
-body{
-    margin: -10px -10px; /*Reset the default*/
-    background-color: lightslategray;
-}
-
-html{
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-header, section, footer, .selfie-container{
-    padding: 10px;
-    border: 1px solid black;
-} 
-
-h2, h3{
-    font-family: sofia, cursive;
-    margin-top: 0.5rem;
-}
-
-h4, h5{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: normal;
-}
-
-/*Setting up grid*/
-.container{
-    width: 100vw;
-    height: 100vh; /*This with the width reset will allow the cointainer to take up the viewing area*/
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 2fr 1fr 1fr 50px;
-    grid-template-areas: 
-        "header header header"
-        "selfie about about"
-        "selfie skills skills"
-        "projects projects projects"
-        "footer footer footer";
-
-    gap: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-
-/*Header*/
-h1{
-    font-family: sofia, cursive;
-    font-size: 5rem;
-    grid-column: 1 / span 3;
+/* Universal */
+* {
     margin: 0;
-    padding-left: 1rem;
-}
-
-header{
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-
-/*Navigation*/
-.main-nav ul{
-    display: flex;
     padding: 0;
-    list-style: none;
-    color: black;
+    box-sizing: inherit;
 }
 
-.main-nav li{
-    margin: 0 3rem;
+html {
+    font-size: 10px;
 }
 
-.main-nav a{
-    border: 1px dashed black;
-    border-radius: 5px;
-    box-shadow: 3px 3px;
-    text-decoration: none;
-    padding: .25rem 2rem;
-    color: black;
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFC996;
 }
 
-a:active{
-    box-shadow: 0  0;
-}
-
-
-/*My photo section*/
-/* .selfie-container img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
-
-.selfie-container{
-    grid-area: selfie;
-    background-color: white;
-    overflow: hidden;
-    background-image: url('./resources/photos/Ashlyn.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
-/*About me*/
-.about-info{
-    grid-area: about;
-    background-color: white;
-    line-height: 1.5rem;
-}
-
-
-/*Projects section*/
-.projects-info img{
-    max-width: 100%;
-    max-height: 100%;
-    border: 2px solid black;
-}
-
-.projects-info{
-    grid-area: projects;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-button{
-    border: none;
-    background-color: white;
-    margin-left: 2rem;
-}
-
-button:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.project{
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-/*Skills section*/
-.skills-info{
-    grid-area: skills;
-    background-color: white;
-}
-
-.skills-image-container{
+.header-container {
+    background-color: #FF8474;
+    height: 75vh;
+    width: 75vw;
+    position: relative;
+    top: 15vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     justify-content: center;
-    border: none;
 }
 
-.skills-image{
-    height: 3rem;
-    width: 3rem;
-}
-
-.css{
-    padding: 0 1.5rem;
-}
-
-.html{
-    width: 4rem;
-    padding: 0 1rem;
-}
-
-.js{
-    width: 6rem;
-}
-
-
-/*Footer*/
-footer{
-    grid-area: footer;
-    background-color: white;
+.header {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-h4{
-    margin: 0;
+.header-name {
+    font-size: 5rem;
+    line-height: 1.7;
+    color: #583D72;
 }
 
-
-/*Contact Page*/
-.contact-main{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    background-color: white;
-    
+.header-title {
+    font-size: 3rem;
+    color: #9F5F80;
 }
 
-.contact-main img{
-    height: 4rem;
-    width: 4rem;
-}
-
-.contact-main ul{
-    list-style: none;
-    display: flex;
-    padding: 1rem auto;
-}
-
-.contact-main li{
-    padding: 1rem;
-}
-
-.contact-main h2{
-    padding-left: .5rem;
-}
-
-
-/*Responsive code*/
-@media only screen and (max-width: 721px){
-    header{
-        text-align: center;
-    }
-
-    header h1{
-        font-size: 4rem;
-    }
-
-    .main-nav ul{
-        justify-content: center;;
-    }
-
-    .main-nav li{
-        margin: 0 1.5rem;
-    }
-
-    .main-nav a{
-        padding: .25rem 1rem;
-    }
-
-    .container{
-        grid-template-areas: 
-            "header header header"
-            "selfie about about"
-            "skills skills skills"
-            "projects projects projects"
-            "footer footer footer";;
-    }
-}
-
-@media only screen and (max-width: 600px){
-    .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-areas: 
-            "header"
-            "about"
-            "skills"
-            "projects"
-            "footer";
-    }
-
-    .selfie-container{
-        display: none;
-    }
-
-    header{
-        align-items: center;
-        text-align: center;
-    }
-
-    .main-nav a{
-        padding: .25rem 0.25rem;
-    }
-
-    .main-nav li{
-        margin: 0 1rem;
-    }
-}
-
-@media only screen and (max-width: 320px){
-    body{
-        margin: 0;
-    }
-}

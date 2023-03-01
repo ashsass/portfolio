@@ -8,4 +8,7 @@ This is a project from Codecademy to create a webpage to hold my portfolio.
 - Showcase projects and skills
 - Create a separate contact page
 
-Visit the page on [GitHub Pages](https://ashsass.github.io/portfolio/)
+Visit the page on [GitHub Pages](ashsass.github.io)
+
+### Notes
+- Want to work on the color scheme with the font colors
