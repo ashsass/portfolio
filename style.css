@@ -16,3 +16,41 @@ https://www.colorhunt.co/palette/ffc996ff84749f5f80583d72
 html {
     font-size: 20px;
 }
+
+/*Display*/
+.root,
+.projects, 
+.tech-container {
+    display: flex;
+}
+
+
+.root { 
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+section {
+    border: .05rem black solid;
+}
+
+.projects > div {
+    width: 50%;
+}
+
+.tech-container {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-container > div {
+    width: 4.5rem;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+
