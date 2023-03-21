@@ -1,14 +1,22 @@
-# Ashlyn Sassaman Portfolio Project
+# Ashlyn Sassaman Porfolio
+A portfolio to compile my projects.
+ Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
-This is a project from Codecademy to create a webpage to hold my portfolio.
+**Link to project:** TBA
 
-## Requirements
-- Make it interactive in some way
-- Make it responsive to different screen sizes
-- Showcase projects and skills
-- Create a separate contact page
 
-Visit the page on [GitHub Pages](ashsass.github.io)
+## How It's Made:
 
-### Notes
-- Want to work on the color scheme with the font colors
+**Tech used:** 
+- HTML
+- CSS
+- JavaScript
+- VSC
+
+## Optimizations
+*(optional)*
+- Want to refactor this using React.
+
+
+## Lessons Learned:
+
