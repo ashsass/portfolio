@@ -13,6 +13,9 @@ A portfolio to compile my projects.
 - JavaScript
 - VSC
 
+## Ideas
+- Adding a fizz animation for the header 
+
 ## Optimizations
 *(optional)*
 - Want to refactor this using React.
