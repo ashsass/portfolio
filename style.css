@@ -37,6 +37,7 @@ html {
 /*Display*/
 .root,
 .projects, 
+.projects-container,
 .tech-container, 
 .about-container {
     display: flex;
@@ -47,8 +48,12 @@ html {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin: 15rem auto 8rem;
+    margin: 15rem auto 0rem;
 
+}
+
+section {
+    margin-bottom: 5rem;
 }
 
 
@@ -88,6 +93,7 @@ h2 {
 h3{
     font-family: 'FactionBlack-Personal', sans-serif;
     font-size: 5rem;
+    text-align: center;
 }
 
 /* About Me Container */
@@ -108,9 +114,25 @@ h3{
 }
 
 /* Project Container */
-.projects > div {
-    width: 50%;
+.projects-container {
+    flex-direction: column;
+    gap: 2rem;
 }
+
+.projects {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projects > div {
+    width: 20%;
+    padding: 1rem;
+}
+
+.projects > h3 {
+    width: 30%;
+}
+
 
 /* Tech Container */
 .tech-container {
