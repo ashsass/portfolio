@@ -36,10 +36,12 @@ html {
 
 /*Display*/
 .root,
+.about-container,
 .projects, 
 .projects-container,
-.tech-container, 
-.about-container {
+.tech-container,
+.tech-icon-container
+ {
     display: flex;
 }
 
@@ -117,6 +119,7 @@ h3{
 .projects-container {
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .projects {
@@ -129,23 +132,17 @@ h3{
     padding: 1rem;
 }
 
-.projects > h3 {
-    width: 30%;
-}
-
 
 /* Tech Container */
 .tech-container {
-    width: 100%;
-    height: auto;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
-.tech-container > div {
-    width: 4.5rem;
-    text-align: center;
-    margin: 1rem 1rem;
+.tech-icon-container {
+    flex-direction: row;
+    width: 50%;
 }
 
+.tech-icon-container > div {
+    width: 2rem;
+}
