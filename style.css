@@ -135,14 +135,22 @@ h3{
 
 /* Tech Container */
 .tech-container {
-    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%; /* Unsure why the width is being effected only for the tech container and not the others? */
+}
+
+.tech-container > h3 {
+    width: 30%;
+    text-align: center;
 }
 
 .tech-icon-container {
-    flex-direction: row;
     width: 50%;
+    margin: 2rem 2rem;
+    justify-content: space-around;
 }
 
 .tech-icon-container > div {
-    width: 2rem;
+    width: 4rem;
+    text-align: center;
 }
