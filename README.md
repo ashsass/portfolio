@@ -1,6 +1,5 @@
 # Ashlyn Sassaman Porfolio
 A portfolio to compile my projects.
- Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
 **Link to project:** TBA
 
@@ -14,12 +13,15 @@ A portfolio to compile my projects.
 - VSC
 
 ## Ideas
-- Adding a fizz animation for the header 
+[] Adding a fizz animation for the header 
+[] Refactor using React
+[] Transition to different parts of the page
+[] Adding in a navigation bar
+[] Add blog section
+[] Contact form
 
 ## Optimizations
-*(optional)*
-- Want to refactor this using React.
+TBA
 
 
-## Lessons Learned:
 
