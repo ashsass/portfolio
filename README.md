@@ -1,7 +1,7 @@
 # Ashlyn Sassaman Porfolio
 A portfolio to compile my projects.
 
-(Link)[!ashsass.com] to portfolio
+[Link](https://ashsass.com/) to portfolio
 
 
 ## How It's Made:
