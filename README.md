@@ -12,7 +12,8 @@ A portfolio to compile my projects.
 - JavaScript
 - VSC
 
-## Ideas
+## Ideas/To Do
+- [ ] Responsive (esp for mobile)
 - [ ] Adding a fizz animation for the header 
 - [ ] Refactor using React
 - [ ] Transition to different parts of the page
